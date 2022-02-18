@@ -3,39 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		D4D822FA1DC97F3D00946CA2 /* UniversalTarget */ = {
+		D4D822FA1DC97F3D00946CA2 /* opus.xcframework */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = D4D822FD1DC97F3D00946CA2 /* Build configuration list for PBXAggregateTarget "UniversalTarget" */;
+			buildConfigurationList = D4D822FD1DC97F3D00946CA2 /* Build configuration list for PBXAggregateTarget "opus.xcframework" */;
 			buildPhases = (
-				D4D822FE1DC97F5900946CA2 /* ShellScript */,
+				D1125FD927BB0D0D0073F0EA /* Build platform libraries */,
+				D4D822FE1DC97F5900946CA2 /* Create xcframework */,
 			);
 			dependencies = (
 			);
-			name = UniversalTarget;
+			name = opus.xcframework;
 			productName = UniversalTarget;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		D19C999627C04BE800D2C97E /* opus_projection.h in Headers */ = {isa = PBXBuildFile; fileRef = D19C999527C04BE800D2C97E /* opus_projection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D822F51DC9698B00946CA2 /* opus.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D822EF1DC9698B00946CA2 /* opus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D822F61DC9698B00946CA2 /* opus_defines.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D822F01DC9698B00946CA2 /* opus_defines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D822F71DC9698B00946CA2 /* opus_multistream.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D822F11DC9698B00946CA2 /* opus_multistream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D822F81DC9698B00946CA2 /* opus_types.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D822F21DC9698B00946CA2 /* opus_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4D822F91DC9698B00946CA2 /* libopus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D822F41DC9698B00946CA2 /* libopus.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D1125FDD27BB0F2C0073F0EA /* build-libopus.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "build-libopus.sh"; sourceTree = "<group>"; };
+		D1125FDE27BB0F2C0073F0EA /* create-framework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "create-framework.sh"; sourceTree = "<group>"; };
+		D19C999527C04BE800D2C97E /* opus_projection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opus_projection.h; path = ../dependencies/include/opus/opus_projection.h; sourceTree = SOURCE_ROOT; };
+		D1BA0FEE27B454770085FC38 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		D4D822D41DC9612800946CA2 /* opus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = opus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D822D81DC9612800946CA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4D822EF1DC9698B00946CA2 /* opus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opus.h; sourceTree = "<group>"; };
-		D4D822F01DC9698B00946CA2 /* opus_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opus_defines.h; sourceTree = "<group>"; };
-		D4D822F11DC9698B00946CA2 /* opus_multistream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opus_multistream.h; sourceTree = "<group>"; };
-		D4D822F21DC9698B00946CA2 /* opus_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opus_types.h; sourceTree = "<group>"; };
-		D4D822F41DC9698B00946CA2 /* libopus.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopus.a; sourceTree = "<group>"; };
+		D4D822EF1DC9698B00946CA2 /* opus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opus.h; path = ../dependencies/include/opus/opus.h; sourceTree = SOURCE_ROOT; };
+		D4D822F01DC9698B00946CA2 /* opus_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opus_defines.h; path = ../dependencies/include/opus/opus_defines.h; sourceTree = SOURCE_ROOT; };
+		D4D822F11DC9698B00946CA2 /* opus_multistream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opus_multistream.h; path = ../dependencies/include/opus/opus_multistream.h; sourceTree = SOURCE_ROOT; };
+		D4D822F21DC9698B00946CA2 /* opus_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opus_types.h; path = ../dependencies/include/opus/opus_types.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +47,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4D822F91DC9698B00946CA2 /* libopus.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1125FDA27BB0EC10073F0EA /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				D1125FDD27BB0F2C0073F0EA /* build-libopus.sh */,
+				D1125FDE27BB0F2C0073F0EA /* create-framework.sh */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 		D4D822CA1DC9612800946CA2 = {
 			isa = PBXGroup;
 			children = (
 				D4D822D61DC9612800946CA2 /* opus */,
+				D1125FDA27BB0EC10073F0EA /* scripts */,
 				D4D822D51DC9612800946CA2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +84,7 @@
 			children = (
 				D4D822EC1DC9698B00946CA2 /* dependencies */,
 				D4D822D81DC9612800946CA2 /* Info.plist */,
+				D1BA0FEE27B454770085FC38 /* Config.xcconfig */,
 			);
 			path = opus;
 			sourceTree = "<group>";
@@ -79,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				D4D822ED1DC9698B00946CA2 /* include */,
-				D4D822F31DC9698B00946CA2 /* lib */,
 			);
 			name = dependencies;
 			path = ../../dependencies;
@@ -99,17 +112,10 @@
 				D4D822EF1DC9698B00946CA2 /* opus.h */,
 				D4D822F01DC9698B00946CA2 /* opus_defines.h */,
 				D4D822F11DC9698B00946CA2 /* opus_multistream.h */,
+				D19C999527C04BE800D2C97E /* opus_projection.h */,
 				D4D822F21DC9698B00946CA2 /* opus_types.h */,
 			);
 			path = opus;
-			sourceTree = "<group>";
-		};
-		D4D822F31DC9698B00946CA2 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				D4D822F41DC9698B00946CA2 /* libopus.a */,
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D822F51DC9698B00946CA2 /* opus.h in Headers */,
+				D19C999627C04BE800D2C97E /* opus_projection.h in Headers */,
 				D4D822F61DC9698B00946CA2 /* opus_defines.h in Headers */,
 				D4D822F81DC9698B00946CA2 /* opus_types.h in Headers */,
 				D4D822F71DC9698B00946CA2 /* opus_multistream.h in Headers */,
@@ -153,8 +160,8 @@
 		D4D822CB1DC9612800946CA2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Viv Labs, Inc.";
+				LastUpgradeCheck = 1320;
+				ORGANIZATIONNAME = "Zello, Inc.";
 				TargetAttributes = {
 					D4D822D31DC9612800946CA2 = {
 						CreatedOnToolsVersion = 8.0;
@@ -172,6 +179,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = D4D822CA1DC9612800946CA2;
@@ -179,8 +187,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D4D822FA1DC97F3D00946CA2 /* opus.xcframework */,
 				D4D822D31DC9612800946CA2 /* opus */,
-				D4D822FA1DC97F3D00946CA2 /* UniversalTarget */,
 			);
 		};
 /* End PBXProject section */
@@ -196,18 +204,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D4D822FE1DC97F5900946CA2 /* ShellScript */ = {
+		D1125FD927BB0D0D0073F0EA /* Build platform libraries */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
+			);
+			name = "Build platform libraries";
+			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Merge Script\n\n# 1\n# Set bash script to exit immediately if any commands fail.\nset -e\n\n# 2\n# Setup some constants for use later on.\nFRAMEWORK_NAME=\"opus\"\n\n# 3\n# If remnants from a previous build exist, delete them.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi\n\n# 4\n# Build the framework for device and for simulator (using\n# all needed architectures).\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch arm64 -arch armv7 -arch armv7s only_active_arch=no defines_module=yes -sdk \"iphoneos\"\nxcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch x86_64 -arch i386 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\"\n\n# 5\n# Remove .framework file if exists on Desktop from previous run.\nif [ -d \"${SRCROOT}/../${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${SRCROOT}/../${FRAMEWORK_NAME}.framework\"\nfi\n\n# 6\n# Copy the device version of framework to Desktop.\ncp -r \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${SRCROOT}/../${FRAMEWORK_NAME}.framework\"\n\n# 7\n# Replace the framework executable within the framework with\n# a new version created by merging the device and simulator\n# frameworks' executables with lipo.\nlipo -create -output \"${SRCROOT}/../${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# 8\n# Copy the Swift module mappings for the simulator into the\n# framework.  The device mappings already exist from step 6.\n#cp -r \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" #\"${SRCROOT}/../${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n# 9\n# Delete the most recent build.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi";
+			shellScript = "scripts/build-libopus.sh\n";
+		};
+		D4D822FE1DC97F5900946CA2 /* Create xcframework */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create xcframework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "scripts/create-framework.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -224,6 +253,7 @@
 /* Begin XCBuildConfiguration section */
 		D4D822DA1DC9612800946CA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1BA0FEE27B454770085FC38 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -263,11 +293,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -275,6 +306,7 @@
 		};
 		D4D822DB1DC9612800946CA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1BA0FEE27B454770085FC38 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -308,11 +340,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -321,49 +354,63 @@
 		D4D822DD1DC9612800946CA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../dependencies/lib";
 				INFOPLIST_FILE = opus/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../dependencies/lib",
+					"$(LIBOPUS_LIBRARY_PATH)",
 				);
+				MARKETING_VERSION = 1.3.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.opus-codec.org";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		D4D822DE1DC9612800946CA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../dependencies/lib";
 				INFOPLIST_FILE = opus/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../dependencies/lib",
+					"$(LIBOPUS_LIBRARY_PATH)",
 				);
+				MARKETING_VERSION = 1.3.1;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.opus-codec.org";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -371,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6ZAST2S5UY;
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -379,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6ZAST2S5UY;
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -404,7 +453,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4D822FD1DC97F3D00946CA2 /* Build configuration list for PBXAggregateTarget "UniversalTarget" */ = {
+		D4D822FD1DC97F3D00946CA2 /* Build configuration list for PBXAggregateTarget "opus.xcframework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4D822FB1DC97F3D00946CA2 /* Debug */,

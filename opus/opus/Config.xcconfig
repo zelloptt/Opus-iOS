@@ -1,0 +1,13 @@
+//
+//  Config.xcconfig
+//  opus
+//
+//  Created by Greg Cooksey on 2/9/22.
+//  Copyright © 2022 Zello, Inc. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+LIBOPUS_LIBRARY_PATH[sdk=iphoneos*] = $(PROJECT_TEMP_DIR)/libopus/iPhoneOS/lib
+LIBOPUS_LIBRARY_PATH[sdk=iphonesimulator*] = $(PROJECT_TEMP_DIR)/libopus/iPhoneSimulator/lib
