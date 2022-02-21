@@ -374,7 +374,10 @@
 				);
 				MARKETING_VERSION = 1.3.1;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-lopus",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.opus-codec.org";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
@@ -405,7 +408,10 @@
 					"$(LIBOPUS_LIBRARY_PATH)",
 				);
 				MARKETING_VERSION = 1.3.1;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-lopus",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.opus-codec.org";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
@@ -417,6 +423,7 @@
 		D4D822FB1DC97F3D00946CA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				DEVELOPMENT_TEAM = 6ZAST2S5UY;
 				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,6 +433,7 @@
 		D4D822FC1DC97F3D00946CA2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				DEVELOPMENT_TEAM = 6ZAST2S5UY;
 				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
