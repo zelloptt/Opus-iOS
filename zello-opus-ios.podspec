@@ -4,11 +4,11 @@ Pod::Spec.new do |spec|
   spec.description  =<<-DESC
 Build scripts and a binary .xcframework for the Opus audio codec on iOS.
 DESC
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.homepage     = "https://github.com/zelloptt/Opus-iOS"
   spec.authors      = { "Greg Cooksey" => "greg@zello.com" }
   spec.source       = { :git => "https://github.com/zelloptt/Opus-iOS.git", :tag => "v" + spec.version.to_s }
   spec.platform     = :ios, "12.1"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
-  spec.vendored_frameworks = "opus.xcframework"
+  spec.vendored_frameworks = "opus.xcframework", "ogg.xcframework"
 end
