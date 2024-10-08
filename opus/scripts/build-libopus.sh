@@ -23,7 +23,7 @@
 #  Choose your libopus version and your currently-installed iOS SDK version:
 #
 # libopus version
-VERSION="1.3.1"
+VERSION="1.5.2"
 # iOS SDK version
 SDKVERSION="$(xcrun --sdk iphoneos --show-sdk-version)"
 # Minimum iOS deployment target
@@ -50,7 +50,7 @@ else
     	OPT_CFLAGS="-Ofast -flto -g"
     	OPT_LDFLAGS="-flto"
     else
-    	OPT_CFLAGS="-Ofast -g"
+    	OPT_ ="-Ofast -g"
     	OPT_LDFLAGS=""
     fi
     OPT_CONFIG_ARGS=""
@@ -76,6 +76,8 @@ HEADERDIR="${PROJECT_DIR}/../dependencies/include"
 
 # where we will keep our sources and build from.
 SRCDIR="${BUILDROOT}/src"
+echo "Created build src directory: ${SRCDIR}"
+
 mkdir -p "${SRCDIR}"
 # where we will store intermediary builds
 INTERDIR="${BUILDROOT}/built"
@@ -95,6 +97,7 @@ fi
 echo "Using opus-${VERSION}.tar.gz"
 
 tar zxf opus-${VERSION}.tar.gz -C "${SRCDIR}"
+
 cd "${SRCDIR}/opus-${VERSION}"
 
 set +e # don't bail out of bash script if ccache doesn't exist
@@ -115,8 +118,8 @@ build_slice () {
     mkdir -p "${INTERDIR}/${PLATFORM}${SDKVERSION}-${ARCH}.sdk"
 
     local CFLAGS="$CFLAGS ${EXTRA_CFLAGS} ${OPT_CFLAGS} -fPIE -miphoneos-version-min=${MINIOSVERSION} -I${OUTPUTDIR}/include -isysroot ${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer/SDKs/${PLATFORM}${SDKVERSION}.sdk"
-    
-    ./configure --enable-float-approx --disable-shared --enable-static --with-pic --disable-extra-programs --disable-doc ${EXTRA_CONFIG} \
+
+    ./configure --enable-float-approx --disable-asm --disable-shared --enable-static --with-pic --disable-extra-programs --disable-doc ${EXTRA_CONFIG} \
 		--prefix="${INTERDIR}/${PLATFORM}${SDKVERSION}-${ARCH}.sdk" \
 		LDFLAGS="$LDFLAGS ${OPT_LDFLAGS} -fPIE -miphoneos-version-min=${MINIOSVERSION} -L${OUTPUTDIR}/lib" \
 		CFLAGS="$CFLAGS ${EXTRA_CFLAGS} ${OPT_CFLAGS} -fPIE -miphoneos-version-min=${MINIOSVERSION} -I${OUTPUTDIR}/include -isysroot ${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer/SDKs/${PLATFORM}${SDKVERSION}.sdk" \
