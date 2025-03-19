@@ -10,7 +10,7 @@ let package = Package(
       .library(name: "ogg", targets: ["ogg"])
     ],
     targets: [
-      .binaryTarget(name: "opus", path: "../opus.xcframework"),
-      .binaryTarget(name: "ogg", path: "../ogg.xcframework")
+      .binaryTarget(name: "opus", path: "opus.xcframework"),
+      .binaryTarget(name: "ogg", path: "ogg.xcframework")
     ]
 )
