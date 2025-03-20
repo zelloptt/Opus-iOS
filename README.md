@@ -10,9 +10,12 @@ These scripts are based on [Chris Ballinger's build scripts](https://github.com/
 I have only tested these build scripts using Xcode 13, with a minimum iOS target of 12.1. If you want to target earlier versions of iOS, you will need to update the `MINIOSVERSION` variable in `opus/scripts/build-libopus.sh` and may need to make other changes to the scripts.
 
 ## Usage
+Choose one of the following ways to incorporate the package into your
+application:
 
-1. [Build the framework](#building-the-framework)
-2. (Optionally) Use the [CocoaPod spec](/zello-opus-ios.podspec)
+- [Build the framework locally](#building-the-framework)
+- Use the [CocoaPod spec](/zello-opus-ios.podspec)
+- Use the Swift package (URL: https://github.com/zelloptt/Opus-iOS)
 
 ## Building the framework
 
