@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.3 (2025-03-19)
+- Adds Swift package manifest
+
 ## 1.0.2 (2024-09-30)
 - Updates xcframework with the Opus 1.5.2 binary
 
