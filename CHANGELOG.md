@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.4 (2025-03-20)
+- Lowers required Swift package toolchain version to 6.0 (Xcode 16)
+
 ## 1.0.3 (2025-03-19)
 - Adds Swift package manifest
 
