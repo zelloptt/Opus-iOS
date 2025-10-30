@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.5 (2025-10-30)
+- Lowers required Swift package toolchain version to 5.9
+
 ## 1.0.4 (2025-03-20)
 - Lowers required Swift package toolchain version to 6.0 (Xcode 16)
 
